@@ -24,6 +24,9 @@ func _physics_process(delta) -> void:
 	
 		velocity += input_vector * accel * delta
 		velocity = velocity.clamped(speed)
+		
+		print(velocity.clamped(speed))
+		# Gets the value of the player speed based on coordinates. 
 	
 	else:
 		velocity = velocity.linear_interpolate(Vector2.ZERO , 0.2)
